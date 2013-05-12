@@ -1,0 +1,137 @@
+/*
+ * @package AJAX_Chat
+ * @author Sebastian Tschan
+ * @copyright (c) Sebastian Tschan
+ * @license GNU Affero General Public License
+ * @link https://blueimp.net/ajax/
+ * Integration for FluxBB 1.4.* by adaur
+ */
+
+
+/*
+ * Positioning
+ */
+#ajaxChatContent #ajaxChatChatList {
+    height:300px;
+    overflow:auto;
+}
+#ajaxChatContent  #ajaxChatChatList div {
+    padding-left:5px;
+    padding-top:2px;
+    padding-right:5px;
+    padding-bottom:2px;
+}
+#ajaxChatContent #ajaxChatChatList img {
+    vertical-align:middle;
+    margin-bottom:2px;
+}
+#ajaxChatContent #ajaxChatChatList cite {
+    margin-right:5px;
+}
+#ajaxChatContent #ajaxChatChatList .bbCodeImage {
+    vertical-align:top;
+    overflow:auto;
+    margin:5px;
+}
+#ajaxChatContent #ajaxChatChatList .delete {
+    float:right;
+    width:10px;
+    height:10px;
+    margin-top:5px;
+    margin-left:5px;
+}
+#ajaxChatContent #ajaxChatInputFieldContainer{
+    font-weight: bold;
+}
+#ajaxChatContent #ajaxChatInputFieldContainer #ajaxChatInputField {
+    width:65%;
+}
+
+
+/*
+ * Borders
+ */
+
+#ajaxChatContent img {
+    border:none;
+}
+#ajaxChatContent #ajaxChatChatList .deleteSelected {
+    border-width:1px;
+    border-style:dotted;
+}
+
+
+/*
+ * Fonts
+ */
+
+#ajaxChatContent, #ajaxChatContent #ajaxChatChatList span.dateTime, #ajaxChatContent #ajaxChatChatList code {
+    font-size:1em;
+}
+#ajaxChatContent a {
+    text-decoration:none;
+}
+#ajaxChatContent a:hover {
+    text-decoration:underline;
+}
+#ajaxChatContent #ajaxChatChatList span.guest, #ajaxChatContent #ajaxChatChatList span.user, #ajaxChatContent #ajaxChatChatList span.moderator , #ajaxChatContent #ajaxChatChatList span.admin{
+    font-size:1em;
+    font-weight:bold;
+}
+#ajaxChatContent #ajaxChatChatList span.chatBot {
+    font-size:1em;
+    font-weight:bold;
+    font-style:italic;
+}
+#ajaxChatContent #ajaxChatList .chatBotMessage, #ajaxChatContent #ajaxChatChatList .chatBotErrorMessage, #ajaxChatContent #ajaxChatChatList .privmsg, #ajaxChatContent #ajaxChatChatList .action  {
+    font-style:italic;
+}
+#ajaxChatContent #ajaxChatChatList q {
+    font-variant:small-caps;
+}
+
+
+/*
+ * Colors
+ */
+#ajaxChatContent #ajaxChatChatList {
+    background-color:transparent;
+}
+
+/*
+You can edit the lines below to change the color each message
+*/
+#ajaxChatContent .rowEven {
+    background-color:transparent;
+}
+#ajaxChatContent .rowOdd {
+    background-color:transparent;
+}
+
+#ajaxChatContent .guest {
+    color:gray;
+}
+#ajaxChatContent .user {
+    color:#000;
+}
+#ajaxChatContent .moderator {
+    color:#00AA00;
+}
+#ajaxChatContent .admin {
+    color:red;
+}
+#ajaxChatContent .chatBot {
+    color:#FF6600;
+}
+#ajaxChatContent #ajaxChatChatList .chatBotErrorMessage {
+    color:red;
+}
+#ajaxChatContent #ajaxChatChatList a {
+    color:#1E90FF;
+}
+#ajaxChatContent #ajaxChatChatList .delete {
+    background:url('../img/delete.png') no-repeat right;
+}
+#ajaxChatContent #ajaxChatChatList .deleteSelected {
+    border-color:#000;
+}
