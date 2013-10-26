@@ -3,13 +3,10 @@
 
 // Some info about your mod.
 $mod_title      = 'Ajax Chat for FluxBB';
-$mod_version    = '0.8.3';
-$release_date   = '2011-02-18';
+$mod_version    = '0.8.6';
+$release_date   = '2013-26-10';
 $author         = 'adaur';
 $author_email   = 'adaur.underground@gmail.com';
-
-// Versions of FluxBB this mod was created for. A warning will be displayed, if versions do not match
-$fluxbb_versions= array('1.4.0', '1.4.1', '1.4.2', '1.4.3', '1.4.4', '1.4.5');
 
 // Set this to false if you haven't implemented the restore function (see below)
 $mod_restore	= true;
@@ -156,9 +153,6 @@ require PUN_ROOT.'include/common.php';
 if (!defined('PUN_DEBUG'))
 	define('PUN_DEBUG', 1);
 
-// Make sure we are running a FluxBB version that this mod works with
-$version_warning = !in_array($pun_config['o_cur_version'], $fluxbb_versions);
-
 $style = (isset($pun_user)) ? $pun_user['style'] : $pun_config['o_default_style'];
 
 ?>
@@ -220,7 +214,7 @@ else
 <div class="blockform">
 	<h2><span>Mod installation</span></h2>
 	<div class="box">
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>?foo=bar">
+		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 			<div><input type="hidden" name="form_sent" value="1" /></div>
 			<div class="inform">
 				<p>This script will update your database to work with the following modification:</p>
@@ -229,9 +223,6 @@ else
 				<p><strong>Disclaimer:</strong> Mods are not officially supported by FluxBB. Mods generally can't be uninstalled without running SQL queries manually against the database. Make backups of all data you deem necessary before installing.</p>
 <?php if ($mod_restore): ?>
 				<p>If you've previously installed this mod and would like to uninstall it, you can click the Restore button below to restore the database.</p>
-<?php endif; ?>
-<?php if ($version_warning): ?>
-				<p style="color: #a00"><strong>Warning:</strong> The mod you are about to install was not made specifically to support your current version of FluxBB (<?php echo $pun_config['o_cur_version']; ?>). This mod supports FluxBB versions: <?php echo pun_htmlspecialchars(implode(', ', $fluxbb_versions)); ?>. If you are uncertain about installing the mod due to this potential version conflict, contact the mod author.</p>
 <?php endif; ?>
 			</div>
 			<p class="buttons"><input type="submit" name="install" value="Install" /><?php if ($mod_restore): ?><input type="submit" name="restore" value="Restore" /><?php endif; ?></p>

@@ -1,24 +1,23 @@
 ##
 ##
-##        Mod title:  Ajax Chat for FluxBB 1.4
+##        Mod title:  Ajax Chat for FluxBB
 ##
-##      Mod version:  0.8.3
-##  Works on FluxBB:  1.4.*
-##     Release date:  2011-02-18
+##      Mod version:  0.8.6
+##  Works on FluxBB:  1.4.*/1.5.*
+##     Release date:  2013-10-26
 ##           Author:  adaur (adaur.underground@gmail.com)
 ##
 ##      Description:  This mod allows you to display a shoutbox where you want on your
 ##					  forum. A real room is also available, see notes.
 ##
-##   Affected files:  index.php
-##					  header.php
+##    Affected file:  index.php
 ##
 ##       Affects DB:  Yes
 ##
 ##            Notes:  If you want to add a link to the chat in the navbar,
 ##					  go to admin_options and add it.
 ##					  See orignal ajax chat readme.txt and
-##					  http://sourceforge.net/projects/ajax-chat/
+##					  http://frug.github.io/AJAX-Chat/
 ##					  to get more informations about your chat :-)
 ##					  If you want to disable or unable the shoutbox for the guests,
 ##					  set $allow_guests to 0 or 1 in include/ajax_chat.php
@@ -67,9 +66,11 @@ require PUN_ROOT.'header.php';
 
 
 #
-#---------[ 6. AFTER, ADD ]--------------------------------------------------
+#---------[ 6. REPLACE WITH ]--------------------------------------------------
 #
 
+$page_head['ajax_chat'] = '<link rel="stylesheet" type="text/css" href="chat/css/shoutbox.css" />';
+require PUN_ROOT.'header.php';
 require PUN_ROOT.'include/ajax_chat.php';
 
 
@@ -86,27 +87,7 @@ $cat_count = 0;
 
 $cat_count = 1;
 
-#
-#---------[ 9. OPEN ]---------------------------------------------------------
-#
-
-header.php
-
 
 #
-#---------[ 10. FIND ]--------------------------------------------------------
-#
-
-<link rel="stylesheet" type="text/css" href="style/<?php echo $pun_user['style'].'.css' ?>" />
-
-
-#
-#---------[ 11. AFTER, ADD ]--------------------------------------------------
-#
-
-<link rel="stylesheet" type="text/css" href="chat/css/shoutbox.css" />
-
-
-#
-#---------[ 12. SAVE/UPLOAD ]-------------------------------------------------
+#---------[ 9. SAVE/UPLOAD ]-------------------------------------------------
 #
